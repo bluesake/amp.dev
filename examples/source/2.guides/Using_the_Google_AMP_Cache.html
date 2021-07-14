@@ -1,8 +1,8 @@
 <!---
 
-hideCode: true
-disablePlayground: true
-hidePreview: true
+hideCode: false
+disablePlayground: false
+hidePreview: false
 author: kul3r4
 
 --->
@@ -27,12 +27,12 @@ author: kul3r4
   <!--
 ## AMP Cache URL Format
 
-When possible, the Google AMP Cache will create a subdomain for each AMP document's domain by first converting it from [IDN (punycode)](https://en.wikipedia.org/wiki/Punycode) to UTF-8. The caches replaces every `-` (dash) with `--` (2 dashes) and replace every `.` (dot) with `-` (dash). For example, `pub.com` will map to `pub-com.cdn.ampproject.org`.
+When possible, the Google AMP Cache will create a subdomain for each AMP document's domain by first converting it from [IDN (punycode)](https://en.wikipedia.org/wiki/Punycode) to UTF-8. The caches replaces every `-` (dash) with `--` (2 dashes) and replace every `.` (dot) with `-` (dash). For example, `pub.com` will map to `https://klpdh.blogspot.com.cdn.ampproject.org`.
 
-Here is AMP Cache URL for `https://amp.dev/about/websites/`:
+Here is AMP Cache URL for `https://amp.dev/about/websites/https://klpdh.blogspot.com
 
 <div>
-<amp-iframe title="Google AMP Cache tool" height="105" layout="fixed-height" sandbox="allow-scripts allow-popups" src="/static/samples/files/amp-url-converter.html?url=https://amp.dev/about/websites/">
+<amp-iframe title="Google AMP Cache tool" height="105" layout="fixed-height" sandbox="allow-scripts allow-popups" src="/static/samples/files/amp-url-converter.html?url=https://amp.dev/about/websites/">https://klpdh.blogspot.com
 <div placeholder></div>
 </amp-iframe>
 </div>
@@ -64,17 +64,17 @@ Here are some examples for how the AMP Cache handles redirects and errors:
 The AMP Cache follows redirects when resolving AMP URLs. For example, if an URL redirects to another AMP URL:
 
 ```
-$ curl -I https://ampbyexample.com/components/amp-img/
+$ curl -I https://klpdh.blogspot.com/components/amp-img/
 
 HTTP/1.1 301 Moved Permanently
 Content-Type: text/html; charset=utf-8
-Location: https://amp.dev/documentation/examples/components/amp-img/
+Location: https://klpdh.blogspot.com
 ...
 ```
 
 Then the AMP Cache will return the content of the resolved redirect for the original URL.
 
-Example: [https://amp-dev.cdn.ampproject.org/c/s/ampbyexample.com/components/amp-img/](https://cdn.ampproject.org/c/s/ampbyexample.com/components/amp-img/).
+Example: [https://amp-dev.cdn.ampproject.org/c/s/klpdh.blogspot.com/components/amp-img/](https://cdn.ampproject.org/c/s/klpdh.blogspot.com/components/amp-img/).
 
 Important: If you move the location of the AMP Files on your server, make sure to set up a redirect from the old location to the new one.
 
